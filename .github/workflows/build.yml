@@ -55,7 +55,7 @@ jobs:
       - name: Archive (Adv360)
         uses: actions/upload-artifact@v4
         with:
-          name: firmware-no-clique
+          name: advantage-360-pro-firmware-${{ steps.get_info.outputs.file_prefix }}
           path: |
             ${{ steps.get_info.outputs.file_prefix }}-left.uf2
             ${{ steps.get_info.outputs.file_prefix }}-right.uf2
@@ -116,4 +116,3 @@ jobs:
           path: |
             ${{ steps.get_info.outputs.file_prefix }}-left.uf2
             ${{ steps.get_info.outputs.file_prefix }}-right.uf2
-
