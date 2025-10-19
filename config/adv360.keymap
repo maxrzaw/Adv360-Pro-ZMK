@@ -52,7 +52,7 @@
         inverted_shift_3: inverted_shift_3 {
             compatible = "zmk,behavior-mod-morph";
             label = "INVERTED_SHIFT_3";
-            bindings = <&kp AT>, <&kp N3>;
+            bindings = <&kp HASH>, <&kp N3>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -61,7 +61,7 @@
         inverted_shift_4: inverted_shift_4 {
             compatible = "zmk,behavior-mod-morph";
             label = "INVERTED_SHIFT_4";
-            bindings = <&kp AT>, <&kp N4>;
+            bindings = <&kp DLLR>, <&kp N4>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -70,7 +70,7 @@
         inverted_shift_5: inverted_shift_5 {
             compatible = "zmk,behavior-mod-morph";
             label = "INVERTED_SHIFT_5";
-            bindings = <&kp AT>, <&kp N5>;
+            bindings = <&kp PRCNT>, <&kp N5>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -79,7 +79,7 @@
         inverted_shift_6: inverted_shift_6 {
             compatible = "zmk,behavior-mod-morph";
             label = "INVERTED_SHIFT_6";
-            bindings = <&kp AT>, <&kp N6>;
+            bindings = <&kp CARET>, <&kp N6>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -88,7 +88,7 @@
         inverted_shift_7: inverted_shift_7 {
             compatible = "zmk,behavior-mod-morph";
             label = "INVERTED_SHIFT_7";
-            bindings = <&kp AT>, <&kp N7>;
+            bindings = <&kp AMPS>, <&kp N7>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -97,7 +97,7 @@
         inverted_shift_8: inverted_shift_8 {
             compatible = "zmk,behavior-mod-morph";
             label = "INVERTED_SHIFT_8";
-            bindings = <&kp AT>, <&kp N8>;
+            bindings = <&kp STAR>, <&kp N8>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -106,7 +106,7 @@
         inverted_shift_9: inverted_shift_9 {
             compatible = "zmk,behavior-mod-morph";
             label = "INVERTED_SHIFT_9";
-            bindings = <&kp AT>, <&kp N9>;
+            bindings = <&kp LPAR>, <&kp N9>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -115,7 +115,7 @@
         inverted_shift_0: inverted_shift_0 {
             compatible = "zmk,behavior-mod-morph";
             label = "INVERTED_SHIFT_0";
-            bindings = <&kp AT>, <&kp N0>;
+            bindings = <&kp RPAR>, <&kp N0>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
