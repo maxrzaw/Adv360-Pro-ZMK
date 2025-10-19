@@ -6,6 +6,8 @@
 
 There is a web based GUI available for editing the keymap. It is available at https://kinesiscorporation.github.io/Adv360-Pro-GUI. This repository is also compatible with certain other web based ZMK keymap editors however they may have keycodes or behaviours that are not implemented on the 360 Pro and could cause unusual behaviour or build failures. Furthermore changes made on other keymap editors may not be compatible if one goes back to using the Kinesis GUI.
 
+The Kinesis GUI doesn't seem to be supported anymore. I have found [this UI](https://nickcoutsos.github.io/keymap-editor/) very useful.
+
 Certain ZMK features (e.g. combos) require knowing the exact key positions in the matrix. They can be found in both image and text format [here](assets/key-positions.md)
 
 ## Building the Firmware with GitHub Actions
