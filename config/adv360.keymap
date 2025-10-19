@@ -28,6 +28,24 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
         };
+
+        inverted_shift_1: inverted_shift_1 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "INVERTED_SHIFT_1";
+            bindings = <&kp EXCL>, <&kp N1>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        inverted_shift_2: inverted_shift_2 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "INVERTED_SHIFT_2";
+            bindings = <&kp AT>, <&kp N2>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     keymap {
@@ -47,11 +65,11 @@
         keypad {
             display-name = "Kp";
             bindings = <
-&kp EQUAL  &kp N1     &kp N2                    &kp N3    &kp N4     &kp N5  &trans                                                  &mo 3      &kp N6  &kp KP_NUM  &kp KP_EQUAL  &kp KP_DIVIDE  &kp KP_MULTIPLY  &kp MINUS
-&kp TAB    &kp Q      &kp W                     &kp E     &kp R      &kp T   &none                                                   &none      &kp Y   &kp KP_N7   &kp KP_N8     &kp KP_N9      &kp KP_MINUS     &kp BSLH
-&kp ESC    &kp A      &kp S                     &kp D     &kp F      &kp G   &none     &kp LCTRL  &kp LGUI      &kp LGUI  &kp RCTRL  &none      &kp H   &kp KP_N4   &kp KP_N5     &kp KP_N6      &kp KP_PLUS      &kp SQT
-&kp LSHFT  &kp Z      &kp X                     &kp C     &kp V      &kp B                        &kp LALT      &kp RALT                        &kp N   &kp KP_N1   &kp KP_N2     &kp KP_N3      &kp KP_ENTER     &kp RSHFT
-&mo 2      &kp GRAVE  &caps_tap_or_hold CAPS 0  &kp LEFT  &kp RIGHT          &kp BSPC  &kp DEL    &kp HOME      &kp END   &kp ENTER  &kp KP_N0          &kp DOWN    &kp UP        &kp KP_DOT     &kp RBKT         &mo 2
+&kp EQUAL  &kp N1     &kp N2                    &kp N3    &kp N4     &kp N5  &trans                                                           &mo 3      &kp N6  &kp KP_NUM  &kp KP_EQUAL  &kp KP_DIVIDE  &kp KP_MULTIPLY  &kp MINUS
+&kp TAB    &kp Q      &kp W                     &kp E     &kp R      &kp T   &inverted_shift_1                                                &none      &kp Y   &kp KP_N7   &kp KP_N8     &kp KP_N9      &kp KP_MINUS     &kp BSLH
+&kp ESC    &kp A      &kp S                     &kp D     &kp F      &kp G   &inverted_shift_2  &kp LCTRL  &kp LGUI      &kp LGUI  &kp RCTRL  &none      &kp H   &kp KP_N4   &kp KP_N5     &kp KP_N6      &kp KP_PLUS      &kp SQT
+&kp LSHFT  &kp Z      &kp X                     &kp C     &kp V      &kp B                                 &kp LALT      &kp RALT                        &kp N   &kp KP_N1   &kp KP_N2     &kp KP_N3      &kp KP_ENTER     &kp RSHFT
+&mo 2      &kp GRAVE  &caps_tap_or_hold CAPS 0  &kp LEFT  &kp RIGHT          &kp BSPC           &kp DEL    &kp HOME      &kp END   &kp ENTER  &kp KP_N0          &kp DOWN    &kp UP        &kp KP_DOT     &kp RBKT         &mo 2
             >;
         };
 
