@@ -7,6 +7,8 @@
 * If you would like to continue using GitHub we recommend using Nick Coutsos’s keymap editor: https://nickcoutsos.github.io/keymap-editor/.
 * If you would prefer to leave GitHub and firmware flashing behind you can perform a one-time firmware update to gain access to Clique. Get started here: https://kinesis-ergo.com/360p-clique-upgrade/.
 
+The Kinesis GUI doesn't seem to be supported anymore. I have found [this UI](https://nickcoutsos.github.io/keymap-editor/) very useful.
+
 Certain ZMK features (e.g. combos) require knowing the exact key positions in the matrix. They can be found in both image and text format [here](assets/key-positions.md)
 
 ## Building the Firmware with GitHub Actions
