@@ -61,6 +61,7 @@ jobs:
             ${{ steps.get_info.outputs.file_prefix }}-right.uf2
   build-clique:
     runs-on: ubuntu-latest
+    if: false # Disable Clique build
     container:
       image: zmkfirmware/zmk-build-arm:stable
     name: Build (Clique)
@@ -115,3 +116,4 @@ jobs:
           path: |
             ${{ steps.get_info.outputs.file_prefix }}-left.uf2
             ${{ steps.get_info.outputs.file_prefix }}-right.uf2
+
