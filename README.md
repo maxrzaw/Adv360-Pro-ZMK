@@ -92,6 +92,34 @@ Follow the programming instruction on page 8 of the [Quick Start Guide](https://
 
 > Note: Some operating systems wont always treat the drive as ejected after the settings-reset file is flashed or may throw a spurious error, this doesn't mean that the flashing process has failed.
 
+### Step-by-Step Firmware Flashing Instructions
+
+1. Obtain the desired Advantage360 Pro firmware files (“.uf2” format) from GitHub or Kinesis
+2. Connect the left module to your PC using the included USB cable. Then disconnect and power down the right module.
+3. Use a paperclip to quickly DOUBLE-CLICK the Bootloader Button shown on the left module to open the virtual drive. The Indicator LEDs with flash white and then change to solid green. The “ADV360PRO” removable drive will appear on your PC in the “file explorer” application (or equivalent).
+4. Copy and paste the left firmware file to the “ADV360PRO” drive. The keyboard will flash blue while installing the file and then disconnect the drive automatically.
+5. Turn the left module battery on and disconnect it from the PC. Work quickly and do not allow the left module to fall asleep while you are updating the right side (you can tap the Fn key on the left module to reset the 30 second sleep timer).
+6. Now connect the right module to your PC with the USB cable and repeat steps 3 and 4 with right module and the right firmware file.
+7. Once the right side stops flashing blue, hold the Mod key down and confirm both Layer LEDs light up green to confirm the keyboard is working properly.
+
+#### Troubleshooting
+
+1. If the keyboard is not working after an update, power-cycle both modules several times.
+2. If it still doesn’t work, try again flashing the appropriate Settings Reset for the destination branch to both modules and then start back at Step 2.
+
+#### Tips and Tricks
+
+1. ALWAYS connect/power-on the LEFT module FIRST, and disconnect/power-down the LEFT module LAST. You NEVER want the RIGHT side to lose track of the LEFT and flash red.
+2. The timing of the double-click on the Bootloader button can be tricky, so it may take a couple tries.
+3. If you don’t have a paperclip, you can use the shortcuts Mod + Hotkey 1 (left module) and Mod + Hotkey 3 (right module) to open the virtual drives.
+5. Do not open both virtual drives at once as it will be difficult to distinguish between them and you might install the wrong file on the wrong drive.
+6. Keystrokes and bootloader commands are disabled while the virtual drives are open or after a Settings Reset has been performed.
+7. Drives can only be updated over USB so you’ll need one of the included USB-C cables. Attempting to open the drive without a USB connection with result in an error. Click the bootloader button once or simply connect the keyboard to your computer with the USB cable.
+8. Firmware files always come in a matched set of left and right files. Both should be installed on their respective module consecutively. Do not install them on the wrong key module.
+9. Do not unplug your keyboard during a firmware update (while the LEDs are flashing blue)
+10. You can safely ignore “drive eject” warnings on macOS.
+11. As of 11-16-23, firmware files generated on GitHub will have unique file names containing the build date and commit number. The command Mod + V can be used to print-to-screen a “hash” with your firmware build date, branch number, and commit number.
+
 ### Upgrading from V2 to V3
 
 If you encounter a git conflict when updating your repository to V3.0 please follow the instructions on how to resolve it [here](UPGRADE.md).
