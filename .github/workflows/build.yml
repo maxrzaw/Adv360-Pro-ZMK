@@ -1,4 +1,10 @@
-on: [push, pull_request, workflow_dispatch]
+on:
+  push:
+    paths:
+      - "bin/**"
+      - "config/**"
+  pull_request:
+  workflow_dispatch:
 
 name: Build
 
