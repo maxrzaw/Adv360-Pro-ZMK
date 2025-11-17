@@ -119,7 +119,7 @@
             bindings = <
 &kp EQUAL  &inverted_shift_1  &inverted_shift_2  &inverted_shift_3  &inverted_shift_4  &inverted_shift_5  &tog 2                                                              &mo 4      &inverted_shift_6  &inverted_shift_7  &inverted_shift_8  &inverted_shift_9  &inverted_shift_0  &kp MINUS
 &kp TAB    &kp Q              &kp W              &kp E              &kp R              &kp T              &tog 1                                                              &none      &kp Y              &kp U              &kp I              &kp O              &kp P              &kp BSLH
-&kp ESC    &kp A              &kp S              &kp D              &kp F              &kp G              &none     &kp LCTRL       &kp LGUI      &kp LGUI  &kp RCTRL         &none      &kp H              &kp J              &kp K              &kp L              &kp SEMI           &kp SQT
+&kp ESC    &kp A              &kp S              &kp D              &kp F              &kp G              &tog 5    &kp LCTRL       &kp LGUI      &kp LGUI  &kp RCTRL         &none      &kp H              &kp J              &kp K              &kp L              &kp SEMI           &kp SQT
 &mo 2      &kp Z              &kp X              &kp C              &kp V              &kp B                                        &kp LALT      &kp RALT                               &kp N              &kp M              &kp COMMA          &kp DOT            &kp FSLH           &kp CAPS
 &mo 3      &kp GRAVE          &caps_word         &kp LEFT           &kp RIGHT                             &kp BSPC  &mt LSHIFT DEL  &kp HOME      &kp END   &mt RSHIFT ENTER  &kp SPACE                     &kp DOWN           &kp UP             &kp LBKT           &kp RBKT           &mo 3
             >;
@@ -166,6 +166,16 @@
 &studio_unlock  &none         &none         &none         &none         &none         &none        &none  &none      &bt BT_CLR  &none       &stp STP_BAT     &none  &none       &none       &none  &none  &none
 &none           &none         &none         &none         &macro_ver    &none                             &none      &none                                    &none  &none       &none       &none  &none  &none
 &none           &none         &none         &none         &none                       &none        &none  &none      &none       &bl BL_TOG  &rgb_ug RGB_TOG         &bl BL_INC  &bl BL_DEC  &none  &none  &none
+            >;
+        };
+
+        Nav {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans    &trans         &trans       &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP  &kp END    &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &kp LEFT  &kp DOWN       &kp UP       &kp RIGHT  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &trans    &trans         &trans       &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans            &trans         &trans       &trans     &trans  &trans
             >;
         };
     };
