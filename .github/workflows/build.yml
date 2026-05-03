@@ -16,7 +16,7 @@ jobs:
     name: Build (Clique)
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
       - name: Get version data
         id: get_info
         run: |
@@ -27,7 +27,7 @@ jobs:
           echo "file_prefix=$file_prefix" >> $GITHUB_OUTPUT
           bin/get_version.sh $branch_name $commit clique
       - name: Cache west modules
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         env:
           cache-name: cache-zephyr-modules
         with:
@@ -37,7 +37,7 @@ jobs:
             zephyr/
             bootloader/
             zmk/
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('manifest-dir/west.yml') }}
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('config/west.yml') }}
           restore-keys: |
             ${{ runner.os }}-build-${{ env.cache-name }}-
             ${{ runner.os }}-build-
@@ -45,7 +45,7 @@ jobs:
       - name: West Init
         run: west init -l config
       - name: West Update
-        run: west update
+        run: west update --fetch-opt=--filter=tree:0
       - name: West Zephyr export
         run: west zephyr-export
       - name: West Build (left)
